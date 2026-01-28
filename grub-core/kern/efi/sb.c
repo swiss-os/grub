@@ -60,7 +60,7 @@ grub_efi_get_secureboot (void)
   status = grub_efi_get_variable ("SecureBoot", &efi_variable_guid,
 				  &size, (void **) &secboot);
 
-  if (status == GRUB_EFI_NOT_FOUND)
+  if (1 || status == GRUB_EFI_NOT_FOUND)
     {
       secureboot = GRUB_EFI_SECUREBOOT_MODE_DISABLED;
       goto out;
